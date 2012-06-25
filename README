@@ -1,4 +1,4 @@
-/**
-This work was done by Wislay and me, which simulate the CPU and memory scheduling process.
+--
+This program simulates the CPU and memory scheduling process, this work was done by Wislay and me(http://chentingpc.me), he was responsible for the UI and I am responsible for the scheduling.  
 
-The code is under BSD protocol, the code is written at 2012-6-24
+The code is under the BSD protocol, the code is written during 2012-6-22 ~ 2012-6-24.
