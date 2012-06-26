@@ -93,8 +93,6 @@ void info::set_memo_table_item(int x, int y, QColor color)
 
 void info::execute()
 {
-
-    PCB *TT1=running_list;
     proc_manage();
     running();
     show_proc_table();
@@ -170,7 +168,6 @@ void info::show_proc_table()
                 item->setBackgroundColor(COLOR_INTR);
                 ui->tw_proc->setItem(idx, cur_proc_table_idx, item);
             }
-            //            delete item;
         }
     }
 }
@@ -239,7 +236,7 @@ void info::on_pb_exec_clicked()
         {
             code_t t;
             t.addition = 0;
-            t.op = RDLK;
+            t.op = RDFL;
             int rep_times(code_unit[1].toInt());
             for (int j = 0; j < rep_times; ++j)
             {
@@ -250,7 +247,7 @@ void info::on_pb_exec_clicked()
         {
             code_t t;
             t.addition = 0;
-            t.op = WTLK;
+            t.op = WTFL;
             int rep_times(code_unit[1].toInt());
             for (int j = 0; j < rep_times; ++j)
             {

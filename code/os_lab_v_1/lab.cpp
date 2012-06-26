@@ -22,8 +22,6 @@ int resource[RESOURCE_SIZE][2];//read lock [0] and wirte lock [1]
 vector <int> exu_list;
 
 int proc_manage(){
-
-    PCB *TT1=running_list;
     if (running_list)
     {
         if (running_list->pc == running_list->code.size()){
