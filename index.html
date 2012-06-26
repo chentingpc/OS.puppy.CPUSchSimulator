@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html>
+
+  <head>
+    <meta charset='utf-8' />
+    <meta http-equiv="X-UA-Compatible" content="chrome=1" />
+    <meta name="description" content="OS.puppy.CPUSchSimulator : CPU scheduling and memory allocation simulator" />
+
+    <link rel="stylesheet" type="text/css" media="screen" href="stylesheets/stylesheet.css">
+
+    <title>OS.puppy.CPUSchSimulator</title>
+  </head>
+
+  <body>
+
+    <!-- HEADER -->
+    <div id="header_wrap" class="outer">
+        <header class="inner">
+          <a id="forkme_banner" href="https://github.com/chentingpc/OS.puppy.CPUSchSimulator">View on GitHub</a>
+
+          <h1 id="project_title">OS.puppy.CPUSchSimulator</h1>
+          <h2 id="project_tagline">CPU scheduling and memory allocation simulator</h2>
+
+            <section id="downloads">
+              <a class="zip_download_link" href="https://github.com/chentingpc/OS.puppy.CPUSchSimulator/zipball/master">Download this project as a .zip file</a>
+              <a class="tar_download_link" href="https://github.com/chentingpc/OS.puppy.CPUSchSimulator/tarball/master">Download this project as a tar.gz file</a>
+            </section>
+        </header>
+    </div>
+
+    <!-- MAIN CONTENT -->
+    <div id="main_content_wrap" class="outer">
+      <section id="main_content" class="inner">
+        <p>--README--
+This program simulates the CPU and memory scheduling process, this work was done by Wislay and me(<a href="http://chentingpc.me">http://chentingpc.me</a>), he was responsible for the UI and I were responsible for the scheduling.  </p>
+
+<p>The code is under the BSD protocol, the code is written during 2012-6-22 ~ 2012-6-24.</p>
+
+<p>--EFFECT--
+用户界面
+<img src="http://chentingpc.me/works/resource/CPUS_ui.png" alt="UI">
+    内存区表示内存的使用情况，不同的颜色属于不同的进程，
+    右边可以输入代码，所需内存单元数，优先级。</p>
+
+<p>指令类型
+    CALC 运算，
+    RDLK 读锁，
+    WTLK 写锁，
+    RDFL 读文件，
+    WTFL 写文件， 
+    URLK 去读锁。
+    还可以产生中断。</p>
+
+<p>正常调度：
+略</p>
+
+<p>中断：
+略</p>
+
+<p>有锁调度（读读、读写、写读、写写）：
+略</p>
+
+<p>死锁产生：
+进程一执行代码：
+WTLK 0
+CALC 10
+WTLK 1
+UWLK 0
+UWLK 1
+CALC 5
+运行二执行代码：
+WTLK 1
+CALC 10
+WTLK 0
+UWLK 1
+UWLK 0
+CALC 5
+<img src="http://chentingpc.me/works/resource/CPUS_deadlock1.png" alt="DEADLOCK1"><img src="http://chentingpc.me/works/resource/CPUS_deadlock2.png" alt="DEADLOCK2"></p>
+      </section>
+    </div>
+
+    <!-- FOOTER  -->
+    <div id="footer_wrap" class="outer">
+      <footer class="inner">
+        <p class="copyright">OS.puppy.CPUSchSimulator maintained by <a href="https://github.com/chentingpc">chentingpc</a></p>
+        <p>Published with <a href="http://pages.github.com">GitHub Pages</a></p>
+      </footer>
+    </div>
+
+    
+
+  </body>
+</html>
